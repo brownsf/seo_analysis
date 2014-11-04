@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <title>SEO Help</title>
+</head>
+
+<body ng-app="seo-help">
+<div ng-controller="MainCtrl as ctrl" class="container">
+    <header class="well well-lg">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1>
+                    SEO Suggestions
+                </h1>
+            </div>
+        </div>
+
+    </header>
+    <form ng-submit="ctrl.submit()" name="urlForm">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="urlInput">URL</label>
+                    <input ng-model="ctrl.url" required class="form-control" id="urlInput" placeholder="URL">
+
+                    <p class="help-block">Example: http://google.com</p>
+                </div>
+
+                <button type="button" ng-click="ctrl.add()" ng-disabled="urlForm.$invalid" class="btn btn-default">Add
+                </button>
+            </div>
+            <div class="col-lg-4">
+                <ul ng-repeat="sites in ctrl.urlList">
+                    <li>{{sites}} <a href="#" ng-click="ctrl.removeUrl($index)">X</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </form>
+    <div class="row">
+        <div class="col-lg-3" ng-controller="links" ng-repeat="(key,link) in ctrl.urlInfo|limitTo:4">
+            <ul class="list-unstyled">
+                <li>URL: {{key}}</li>
+                <li ng-click="showH1s = !showH1s">
+                    H1 words: <span ng-show="link.h1Contents[0]">(click to show)</span>
+                    <span ng-hide="link.h1Contents[0]">No results</span>
+                    <ul ng-show="link.h1Contents[0]" class="list-group">
+                        <li class="list-group-item" ng-show="showH1s" ng-repeat="h in link.h1Contents track by $index">
+                            {{h}}
+                        </li>
+                    </ul>
+                </li>
+                <li ng-click="showH2s = !showH2s">
+                    H2 words: <span ng-show="link.h2Contents[0]">(click to show)</span>
+                    <span ng-hide="link.h2Contents[0]">No results</span>
+                    <ul ng-show="link.h2Contents[0]" class="list-group">
+                        <li class="list-group-item" ng-show="showH2s" ng-repeat="h in link.h2Contents track by $index">
+                            {{h}}
+                        </li>
+                    </ul>
+                </li>
+                <li ng-click="showH3s=!showH3s">
+                    H3 words:<span ng-show="link.h3Contents[0]">(click to show)</span>
+                    <span ng-hide="link.h3Contents[0]">No results</span>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-show="showH3s" ng-repeat="h in link.h3Contents track by $index">
+                            {{h}}
+                        </li>
+                    </ul>
+                </li>
+                <li ng-click="showPop=!showPop">
+                Popular terms:(click to show)
+                <ul class="list-group">
+                    <li class="list-group-item" ng-show="showPop" ng-repeat="h in link.popularWords|limitTo:10">
+                        {{h.term.word}}: <span>{{h.term.count}}</span>
+                    </li>
+                </ul>
+            </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script type="text/javascript">
+    angular.module('seo-help', [])
+            .factory('UrlService', ['$http',
+                function ($http) {
+                    return {
+                        query: function ($url) {
+                            return $http.get('http://localhost:3000/scrape', {params: {url: $url}});
+                        }
+                    }
+                }])
+
+            .controller('MainCtrl', ['$http', 'UrlService', function ($http, UrlService) {
+
+
+                var self = this;
+                self.urlList = [];
+                self.urlInfo = {};
+                self.url = "http://";
+                self.add = function () {
+
+                    if (self.urlList.indexOf(self.url) == -1) {
+                        self.urlList.push(self.url);
+                        self.seoCheck(self.url);
+                    }
+
+                    self.url = 'http://';
+
+
+                }
+                self.removeUrl = function (num) {
+                    console.log(num);
+                    var name = self.urlList[num];
+                    delete self.urlInfo[name];
+                    self.urlList.splice(num, 1);
+                }
+                self.seoCheck = function (urlInput) {
+
+
+                    UrlService.query(urlInput).then(function (response) {
+                        self.urlInfo[urlInput] = response.data;
+
+                    }, function (errResponse) {
+                        console.error('Error while fetching info');
+                    });
+
+                }
+
+
+            }]).controller('links', function ($scope) {
+
+
+            });
+
+
+</script>
+</html>
