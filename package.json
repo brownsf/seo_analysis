@@ -9,7 +9,8 @@
   "dependencies": {
 	"express"    : "latest",
         "request"    : "latest",
-        "cheerio"    : "latest"
+        "cheerio"    : "latest",
+		"jsdom":"latest"
   },
   "engines": {
     "node": "0.10.x"
