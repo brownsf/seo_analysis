@@ -101,7 +101,8 @@ function sortObject(obj) {
     return arr; // returns array
 }
 app.use(express.static(__dirname+"/public"));
-app.listen('80');
+var port = process.env.PORT || 3000;
+app.listen(port);
 
 console.log('Magic happens on port 80');
 
