@@ -1,0 +1,249 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/vagrant/node-js-getting-started',
+6 verbose install   [ 'express', 'request', 'cheerio' ] ]
+7 info preinstall node-js-getting-started@0.1.2
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'request@latest', null ]
+10 verbose cache add name=undefined spec="request@latest" args=["request@latest",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'request@latest',
+11 verbose parsed url   path: 'request@latest',
+11 verbose parsed url   href: 'request@latest' }
+12 verbose cache add [ 'cheerio@latest', null ]
+13 verbose cache add name=undefined spec="cheerio@latest" args=["cheerio@latest",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'cheerio@latest',
+14 verbose parsed url   path: 'cheerio@latest',
+14 verbose parsed url   href: 'cheerio@latest' }
+15 verbose cache add [ 'express@latest', null ]
+16 verbose cache add name=undefined spec="express@latest" args=["express@latest",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'express@latest',
+17 verbose parsed url   path: 'express@latest',
+17 verbose parsed url   href: 'express@latest' }
+18 verbose cache add name="request" spec="latest" args=["request","latest"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'latest',
+19 verbose parsed url   path: 'latest',
+19 verbose parsed url   href: 'latest' }
+20 verbose addNamed [ 'request', 'latest' ]
+21 verbose addNamed [ null, null ]
+22 verbose cache add name="cheerio" spec="latest" args=["cheerio","latest"]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'latest',
+23 verbose parsed url   path: 'latest',
+23 verbose parsed url   href: 'latest' }
+24 verbose addNamed [ 'cheerio', 'latest' ]
+25 verbose addNamed [ null, null ]
+26 verbose cache add name="express" spec="latest" args=["express","latest"]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: 'latest',
+27 verbose parsed url   path: 'latest',
+27 verbose parsed url   href: 'latest' }
+28 verbose addNamed [ 'express', 'latest' ]
+29 verbose addNamed [ null, null ]
+30 silly lockFile 5da6dfb1-request-latest request@latest
+31 verbose lock request@latest /home/vagrant/.npm/5da6dfb1-request-latest.lock
+32 silly lockFile b5ca765b-cheerio-latest cheerio@latest
+33 verbose lock cheerio@latest /home/vagrant/.npm/b5ca765b-cheerio-latest.lock
+34 silly lockFile c30a01ab-express-latest express@latest
+35 verbose lock express@latest /home/vagrant/.npm/c30a01ab-express-latest.lock
+36 info addNameTag [ 'request', 'latest' ]
+37 info addNameTag [ 'cheerio', 'latest' ]
+38 info addNameTag [ 'express', 'latest' ]
+39 verbose request where is /request
+40 verbose request registry https://registry.npmjs.org/
+41 verbose request id 63f5d2a0f67a90bc
+42 verbose url raw /request
+43 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+44 verbose url resolved https://registry.npmjs.org/request
+45 verbose request where is https://registry.npmjs.org/request
+46 info trying registry request attempt 1 at 01:06:44
+47 verbose etag "5CWZ4666GHZHZ3FASBVECPIS5"
+48 http GET https://registry.npmjs.org/request
+49 verbose request where is /cheerio
+50 verbose request registry https://registry.npmjs.org/
+51 verbose url raw /cheerio
+52 verbose url resolving [ 'https://registry.npmjs.org/', './cheerio' ]
+53 verbose url resolved https://registry.npmjs.org/cheerio
+54 verbose request where is https://registry.npmjs.org/cheerio
+55 info trying registry request attempt 1 at 01:06:45
+56 verbose etag "HG2FYD5PJ1HXOF27RY9MJRTR"
+57 http GET https://registry.npmjs.org/cheerio
+58 verbose request where is /express
+59 verbose request registry https://registry.npmjs.org/
+60 verbose url raw /express
+61 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+62 verbose url resolved https://registry.npmjs.org/express
+63 verbose request where is https://registry.npmjs.org/express
+64 info trying registry request attempt 1 at 01:06:45
+65 verbose etag "6GESXL63U36TPWFIRZ6VV5VKK"
+66 http GET https://registry.npmjs.org/express
+67 http 200 https://registry.npmjs.org/cheerio
+68 silly registry.get cb [ 200,
+68 silly registry.get   { date: 'Tue, 04 Nov 2014 01:04:20 GMT',
+68 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+68 silly registry.get     etag: '"DR0ZYNUB1FXBIJ7SPFLGBXPJ3"',
+68 silly registry.get     'content-type': 'application/json',
+68 silly registry.get     'cache-control': 'max-age=60',
+68 silly registry.get     'content-length': '85356',
+68 silly registry.get     'accept-ranges': 'bytes',
+68 silly registry.get     via: '1.1 varnish',
+68 silly registry.get     age: '51',
+68 silly registry.get     'x-served-by': 'cache-dfw1821-DFW',
+68 silly registry.get     'x-cache': 'HIT',
+68 silly registry.get     'x-cache-hits': '1',
+68 silly registry.get     'x-timer': 'S1415063060.916750,VS0,VE0',
+68 silly registry.get     vary: 'Accept',
+68 silly registry.get     'keep-alive': 'timeout=10, max=50',
+68 silly registry.get     connection: 'Keep-Alive' } ]
+69 http 200 https://registry.npmjs.org/request
+70 silly registry.get cb [ 200,
+70 silly registry.get   { date: 'Tue, 04 Nov 2014 01:04:20 GMT',
+70 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+70 silly registry.get     etag: '"725GPA5G453TNC37S2PO87GN3"',
+70 silly registry.get     'content-type': 'application/json',
+70 silly registry.get     'cache-control': 'max-age=60',
+70 silly registry.get     'content-length': '122158',
+70 silly registry.get     'accept-ranges': 'bytes',
+70 silly registry.get     via: '1.1 varnish',
+70 silly registry.get     age: '28',
+70 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+70 silly registry.get     'x-cache': 'HIT',
+70 silly registry.get     'x-cache-hits': '2',
+70 silly registry.get     'x-timer': 'S1415063060.908967,VS0,VE0',
+70 silly registry.get     vary: 'Accept',
+70 silly registry.get     'keep-alive': 'timeout=10, max=50',
+70 silly registry.get     connection: 'Keep-Alive' } ]
+71 verbose addNamed [ 'cheerio', '0.17.0' ]
+72 verbose addNamed [ '0.17.0', '0.17.0' ]
+73 silly lockFile 26cb7f10-cheerio-0-17-0 cheerio@0.17.0
+74 verbose lock cheerio@0.17.0 /home/vagrant/.npm/26cb7f10-cheerio-0-17-0.lock
+75 verbose addNamed [ 'request', '2.47.0' ]
+76 verbose addNamed [ '2.47.0', '2.47.0' ]
+77 silly lockFile 6725db09-request-2-47-0 request@2.47.0
+78 verbose lock request@2.47.0 /home/vagrant/.npm/6725db09-request-2-47-0.lock
+79 silly lockFile 5a101fd8-s-org-request-request-2-47-0-tgz https://registry.npmjs.org/request/-/request-2.47.0.tgz
+80 verbose lock https://registry.npmjs.org/request/-/request-2.47.0.tgz /home/vagrant/.npm/5a101fd8-s-org-request-request-2-47-0-tgz.lock
+81 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.47.0.tgz',
+81 verbose addRemoteTarball   '09e9fd1a4fed6593a805ef8202b20f0c5ecb485f' ]
+82 info retry fetch attempt 1 at 01:06:50
+83 verbose fetch to= /tmp/npm-2686-W2ElGXbL/registry.npmjs.org/request/-/request-2.47.0.tgz
+84 http GET https://registry.npmjs.org/request/-/request-2.47.0.tgz
+85 silly lockFile 26cb7f10-cheerio-0-17-0 cheerio@0.17.0
+86 silly lockFile 26cb7f10-cheerio-0-17-0 cheerio@0.17.0
+87 silly lockFile b5ca765b-cheerio-latest cheerio@latest
+88 silly lockFile b5ca765b-cheerio-latest cheerio@latest
+89 http 200 https://registry.npmjs.org/express
+90 silly registry.get cb [ 200,
+90 silly registry.get   { date: 'Tue, 04 Nov 2014 01:04:20 GMT',
+90 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+90 silly registry.get     etag: '"BPEPPOI4VAIKJNPLPDXQNKFPC"',
+90 silly registry.get     'content-type': 'application/json',
+90 silly registry.get     'cache-control': 'max-age=60',
+90 silly registry.get     'content-length': '412387',
+90 silly registry.get     'accept-ranges': 'bytes',
+90 silly registry.get     via: '1.1 varnish',
+90 silly registry.get     age: '53',
+90 silly registry.get     'x-served-by': 'cache-dfw1827-DFW',
+90 silly registry.get     'x-cache': 'HIT',
+90 silly registry.get     'x-cache-hits': '1',
+90 silly registry.get     'x-timer': 'S1415063060.941772,VS0,VE1',
+90 silly registry.get     vary: 'Accept',
+90 silly registry.get     'keep-alive': 'timeout=10, max=50',
+90 silly registry.get     connection: 'Keep-Alive' } ]
+91 http 200 https://registry.npmjs.org/request/-/request-2.47.0.tgz
+92 verbose addNamed [ 'express', '4.10.1' ]
+93 verbose addNamed [ '4.10.1', '4.10.1' ]
+94 silly lockFile 513c21c6-express-4-10-1 express@4.10.1
+95 verbose lock express@4.10.1 /home/vagrant/.npm/513c21c6-express-4-10-1.lock
+96 silly lockFile 3d8e7af4-s-org-express-express-4-10-1-tgz https://registry.npmjs.org/express/-/express-4.10.1.tgz
+97 verbose lock https://registry.npmjs.org/express/-/express-4.10.1.tgz /home/vagrant/.npm/3d8e7af4-s-org-express-express-4-10-1-tgz.lock
+98 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-4.10.1.tgz',
+98 verbose addRemoteTarball   'a291c812bc8b0ed6ab877366fe0e68a2368fde7e' ]
+99 info retry fetch attempt 1 at 01:06:50
+100 verbose fetch to= /tmp/npm-2686-W2ElGXbL/registry.npmjs.org/express/-/express-4.10.1.tgz
+101 http GET https://registry.npmjs.org/express/-/express-4.10.1.tgz
+102 silly lockFile 5a101fd8-s-org-request-request-2-47-0-tgz https://registry.npmjs.org/request/-/request-2.47.0.tgz
+103 silly lockFile 5a101fd8-s-org-request-request-2-47-0-tgz https://registry.npmjs.org/request/-/request-2.47.0.tgz
+104 silly lockFile 6725db09-request-2-47-0 request@2.47.0
+105 silly lockFile 6725db09-request-2-47-0 request@2.47.0
+106 silly lockFile 5da6dfb1-request-latest request@latest
+107 silly lockFile 5da6dfb1-request-latest request@latest
+108 http 200 https://registry.npmjs.org/express/-/express-4.10.1.tgz
+109 silly lockFile 3d8e7af4-s-org-express-express-4-10-1-tgz https://registry.npmjs.org/express/-/express-4.10.1.tgz
+110 silly lockFile 3d8e7af4-s-org-express-express-4-10-1-tgz https://registry.npmjs.org/express/-/express-4.10.1.tgz
+111 silly lockFile 513c21c6-express-4-10-1 express@4.10.1
+112 silly lockFile 513c21c6-express-4-10-1 express@4.10.1
+113 silly lockFile c30a01ab-express-latest express@latest
+114 silly lockFile c30a01ab-express-latest express@latest
+115 error Error: EACCES, mkdir '/home/vagrant/.npm/request/2.47.0'
+115 error  { [Error: EACCES, mkdir '/home/vagrant/.npm/request/2.47.0']
+115 error   errno: 3,
+115 error   code: 'EACCES',
+115 error   path: '/home/vagrant/.npm/request/2.47.0',
+115 error   parent: 'node-js-getting-started' }
+116 error Please try running this command again as root/Administrator.
+117 error System Linux 3.13.0-36-generic
+118 error command "/usr/bin/node" "/usr/bin/npm" "install"
+119 error cwd /vagrant/node-js-getting-started
+120 error node -v v0.10.32
+121 error npm -v 1.4.28
+122 error path /home/vagrant/.npm/request/2.47.0
+123 error code EACCES
+124 error errno 3
+125 error stack Error: EACCES, mkdir '/home/vagrant/.npm/request/2.47.0'
+126 verbose exit [ 3, true ]
