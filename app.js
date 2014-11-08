@@ -101,8 +101,8 @@ function sortObject(obj) {
     return arr; // returns array
 }
 app.use(express.static(__dirname+"/public"));
-app.listen('3000');
+app.listen('80');
 
-console.log('Magic happens on port 3000');
+console.log('Magic happens on port 80');
 
 exports = module.exports = app;
