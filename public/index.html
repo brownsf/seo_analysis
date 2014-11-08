@@ -94,7 +94,7 @@
                 function ($http) {
                     return {
                         query: function ($url) {
-                            return $http.get('http://localhost:3000/scrape', {params: {url: $url}});
+                            return $http.get('/scrape', {params: {url: $url}});
                         }
                     }
                 }])
